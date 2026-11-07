@@ -26,8 +26,8 @@ acompanhar.
 
 ## Caixa
 
-- Todo trabalho de código segue o fluxo do GitHub do projeto (a habilidade `fluxo-github`, quando existir): branch por
-  tarefa, Pull Request, o "sim" da pessoa antes de juntar.
+- Todo trabalho de código segue a habilidade `github`: branch e pasta por tarefa, Pull Request, o "sim" da pessoa antes
+  de juntar.
 - Não baixe o projeto inteiro só para olhar: para uma consulta rápida, leia pelo GitHub (`github`).
 
 ## Prova

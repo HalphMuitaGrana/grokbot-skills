@@ -9,7 +9,7 @@ referências públicas. Não têm ligação com a xAI nem com o Grok Bot.
 No Bots, em Configurações → Habilidades, cole o link deste repositório. Ele entra como um pacote só, com uma categoria
 por pasta. Tudo chega desligado: leia, ligue o pacote ou a categoria e escolha os bots.
 
-## O que tem (24 habilidades, uma por tarefa)
+## O que tem (23 habilidades, uma por tarefa)
 
 | Categoria | Habilidade | Para quê |
 |---|---|---|
@@ -33,7 +33,9 @@ por pasta. Tudo chega desligado: leia, ligue o pacote ou a categoria e escolha o
 | rotinas-e-agenda | `rotinas` | horário, quem recebe e vigias que se apagam sozinhas |
 | rotinas-e-agenda | `agenda` | marcar, mudar e combinar horários |
 | codigo | `codigo` | passar trabalho de código a outro bot |
-| codigo | `github` | consultar e agir no GitHub com segurança |
+| codigo | `github` | o fluxo completo do GitHub: branch e pasta por tarefa, Pull Request, versões, primeira subida, consultas e acesso |
 | voz | `nota-de-voz` | responder falando |
-| habilidades | `criar-habilidades` | criar e corrigir habilidades |
 | o-app | `mapa-da-tela` | onde fica cada coisa no app |
+
+Criar e corrigir habilidades não está aqui de propósito: o Bots já traz a habilidade `criar-habilidade`, sempre ligada.
+Use uma habilidade por função: se o seu app já tem uma com o mesmo trabalho, ligue só uma das duas.
