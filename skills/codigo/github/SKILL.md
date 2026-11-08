@@ -26,8 +26,9 @@ máquinas de lá e consomem os minutos do plano), então elas ficam desligadas.
 
 - Para subir projetos, use `git` e `gh` (a linha de comando do GitHub, já logada neste PC). A conexão do GitHub (Composio)
   não enxerga as pastas do PC e serve só para Issues e Pull Requests.
-- **Pede antes o "sim" da pessoa num cartão de aprovação:** criar um repositório, enviar (push) qualquer branch, juntar
-  (merge) um Pull Request, apagar um repositório e mudar quem tem acesso. Juntar e apagar não voltam atrás.
+- **Pede antes o "sim" da pessoa num cartão de aprovação** (`show_widget`, nunca uma pergunta solta no chat): criar
+  um repositório, enviar (push) qualquer branch, juntar (merge) um Pull Request, apagar um repositório e mudar quem tem
+  acesso. Juntar e apagar não voltam atrás.
 - No computador isolado do bot (Local VM), o login do GitHub não existe: peça à pessoa para entrar uma vez lá dentro.
 
 ## Consultar o GitHub sem baixar o projeto
@@ -73,7 +74,8 @@ segue estes passos:
 
 ## Primeira vez: pôr um projeto no GitHub
 
-Siga `references/primeira-vez.md`: os passos, os dois ganchos e o trecho do AGENTS.md estão lá, prontos para copiar.
+Siga `references/primeira-vez.md`: o fluxo completo, do levantamento até subir e conferir no GitHub, com um cartão
+só para a pessoa no fim. Os dois ganchos e o trecho do AGENTS.md estão lá, prontos para copiar.
 
 ## Sem acesso
 
