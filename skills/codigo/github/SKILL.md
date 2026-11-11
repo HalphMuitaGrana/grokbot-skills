@@ -27,7 +27,7 @@ máquinas de lá e consomem os minutos do plano), então elas ficam desligadas.
 - Para subir projetos, use `git` e `gh` (a linha de comando do GitHub, já logada neste PC). A conexão do GitHub (Composio)
   não enxerga as pastas do PC e serve só para Issues e Pull Requests.
 - **Pede antes o "sim" da pessoa num cartão de aprovação** (`show_widget`, nunca uma pergunta solta no chat): criar
-  um repositório, enviar (push) qualquer branch, juntar (merge) um Pull Request, apagar um repositório e mudar quem tem
+  um repositório, enviar (push) qualquer branch, ligar as Actions do GitHub para uma verificação longa, juntar (merge) um Pull Request, apagar um repositório e mudar quem tem
   acesso. Juntar e apagar não voltam atrás.
 - No computador isolado do bot (Local VM), o login do GitHub não existe: peça à pessoa para entrar uma vez lá dentro.
 
@@ -62,6 +62,16 @@ segue estes passos:
 8. Avise a pessoa que o Pull Request está pronto, com o link e o "como conferir". Junte (merge) só com o ok dela.
 9. Depois de juntar, apague a pasta de trabalho (`git worktree remove`) e a branch.
 
+## Verificação longa: rodar nas Actions do GitHub
+
+A regra é rodar os testes no PC. Só a verificação que passa de **1 hora** vai para as Actions do GitHub, na branch da tarefa. O resultado chega ao Pull Request pelo `gh pr checks`, e o PC fica livre.
+
+- **O que conta como longa:** a verificação inteira leva mais de 1 hora no PC. Até 1 hora, fica no PC: é o caso de quase todas.
+- **Só essa vai para lá.** Teste rápido, lint, typecheck, i18n e a conferência de uma mudança pequena continuam no PC.
+- **Só com o "sim" da pessoa no cartão de aprovação.** Use um workflow que já exista no repositório e rode na branch da tarefa. Se não houver um, acrescentar um gasta os minutos do plano e também precisa do "sim".
+- **As Actions ficam desligadas no dia a dia.** Para essa rodada, ligue só o necessário e desligue quando ela acabar.
+- Traga o resultado para o Pull Request: o que passou, o que falhou e o tempo. Se o GitHub discordar do PC, vale o do PC, porque a máquina de lá é Linux e pode não ter o mesmo Windows.
+
 ## Versão nova (da dev para a main)
 
 - Só com o ok da pessoa: abra um Pull Request da dev para a main, com a lista do que entra.
@@ -93,7 +103,7 @@ só para a pessoa no fim. Os dois ganchos e o trecho do AGENTS.md estão lá, pr
   de cada commit e de cada envio. Nunca mostre um token na conversa nem o grave em arquivo.
 - Nunca crie um repositório na pasta-mãe de vários projetos.
 - Nunca ligue as Actions do GitHub nem acrescente arquivos em `.github/workflows` sem o ok da pessoa: elas gastam minutos
-  pagos. Os testes rodam aqui no PC.
+  pagos. A única exceção é a verificação de mais de 1 hora, na seção acima; os demais testes rodam aqui no PC.
 - Se um bot programador recusou abrir ou mudar um PR, a recusa é o resultado: conte o motivo em vez de abrir o PR você
   mesmo.
 
@@ -107,4 +117,5 @@ só para a pessoa no fim. Os dois ganchos e o trecho do AGENTS.md estão lá, pr
 - [ ] Cada ação que muda o GitHub (criar, enviar, juntar, apagar, mudar acesso) teve antes o cartão de aprovação, e a
       resposta traz o link do PR ou do repositório.
 - [ ] Nenhum segredo foi para o git: o gitleaks passou.
+- [ ] A verificação de mais de 1 hora foi para as Actions com o ok da pessoa; até 1 hora, rodou no PC.
 - [ ] Na primeira vez: a prova de `references/primeira-vez.md` passou.
